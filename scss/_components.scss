@@ -1,0 +1,18 @@
+.btn {
+  font-family: $font-family-header;
+  font-weight: 400;
+  font-size: 19px;
+  color: $base-color-dark;
+  padding: 18px 52px;
+  cursor: pointer;
+  &_light {
+    background: $base-color-light;
+    letter-spacing: 0.57px;
+    border: none;
+  }
+  &_transparent {
+    background: transparent;
+    letter-spacing: 0.38px;
+    border: 2px solid #FFCA42;
+  }
+}
