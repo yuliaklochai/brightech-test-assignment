@@ -6,14 +6,11 @@
     display: flex;
     align-items: center;
   }
-}
-.wrapper {
-  margin: 0 auto;
-  padding: 20px 0;
-  max-width: 1300px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 .logo {
   margin-right: 35px;

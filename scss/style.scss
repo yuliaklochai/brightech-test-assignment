@@ -1,8 +1,9 @@
-@import 'core/reset';
-@import 'core/typography';
-
 @import 'abstracts/variables';
 @import 'abstracts/mixins';
 
+@import 'core/reset';
+@import 'core/typography';
+
 @import 'components';
 @import 'layout/header';
+@import 'layout/banner';
