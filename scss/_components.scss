@@ -19,6 +19,22 @@
   &_transparent {
     background: transparent;
     letter-spacing: 0.38px;
-    border: 2px solid #FFCA42;
+    border: 2px solid #ffca42;
+  }
+}
+
+.title-2 {
+  font-family: $font-family-header;
+  font-size: 42px;
+  line-height: 50px;
+  color: $base-color-dark;
+  position: relative;
+  &::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 50px;
+    position: absolute;
+    background: $base-color-light;
   }
 }

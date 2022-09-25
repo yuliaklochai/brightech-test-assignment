@@ -1,0 +1,27 @@
+.order-today {
+  background: $base-color-dark;
+  padding: 70px 0;
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 200px;
+  }
+  &__title {
+    color: $font-color-light;
+    margin-bottom: 54px;
+    &::after {
+      bottom: -23px;
+    }
+  }
+  &__desc {
+    font-family: $font-family-base;
+    font-size: 19px;
+    line-height: 28px;
+    color: $font-color-footer;
+    margin-bottom: 27px;
+  }
+  &__btn {
+    color: $font-color-light;
+  }
+}
