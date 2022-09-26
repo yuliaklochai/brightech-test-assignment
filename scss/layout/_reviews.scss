@@ -1,0 +1,127 @@
+.reviews {
+  padding: 130px 0 150px;
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    @include md {
+      flex-direction: column;
+    }
+  }
+  &__desc {
+    flex: 1 1 40%;
+  }
+  &__block {
+    flex: 1 1 60%;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    @include xs {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__title {
+    margin-bottom: 59px;
+    &::after {
+      bottom: -23px;
+    }
+  }
+  &__text {
+    font-family: $font-family-base;
+    color: $font-color-grey;
+    @include adaptive_font(19, 16);
+    line-height: 1.8;
+    margin-bottom: 14px;
+  }
+  &__link {
+    font-family: $font-family-base;
+    color: $base-color-dark;
+    @include adaptive_font(18, 15);
+    line-height: 1.6;
+    transition: all .5s ease;
+    padding-bottom: 2px;
+    &:hover {
+      border-bottom: 1px solid $base-color-dark;
+    }
+  }
+}
+.rating {
+  display: flex;
+  margin-bottom: 12px;
+  &__data {
+    font-family: $font-family-header;
+    @include adaptive_font(22, 20);
+    line-height: 1.2;
+    color: $base-color-dark;
+  }
+}
+.rating-circles {
+  display: flex;
+  gap: 5px;
+  margin-right: 10px;
+  &__item {
+    border-radius: 50%;
+    border: 1px solid $base-color-light;
+    &_20 {
+      height: 20px;
+      width: 20px;
+    }
+    &_13 {
+      height: 13px;
+      width: 13px;
+    }
+    &_full {
+      background: $base-color-light;
+    }
+    &_half {
+      background: linear-gradient(
+        to right,
+        $base-color-light 50%,
+        transparent 50%
+      );
+    }
+  }
+}
+.review {
+  background: $base-color-dark;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.11);
+  padding: 30px 35px;
+  &_1 {
+    grid-row: 1 / 3;
+    grid-column: 1 / 2;
+  }
+  &_2 {
+    grid-row: 3 / 5;
+    grid-column: 1 / 2;
+  }
+  &_3 {
+    grid-row: 2 / 4;
+    grid-column: 2 / 3;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+  &__name {
+    font-family: $font-family-header;
+    @include adaptive_font(24, 20);
+    line-height: 1.2;
+    margin-bottom: 15px;
+  }
+  &__title {
+    font-family: $font-family-header;
+    @include adaptive_font(22, 19);
+    line-height: 1.5;
+    margin-bottom: 13px;
+  }
+  &__text {
+    font-family: $font-family-base;
+    color: $font-color-footer;
+    @include adaptive_font(18, 16);
+    line-height: 1.6;
+  }
+}

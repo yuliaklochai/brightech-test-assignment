@@ -14,6 +14,11 @@
     display: flex;
     gap: 30px;
     justify-content: space-between;
+    width: 100%;
+    @include md {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 }
 .book {
@@ -24,34 +29,39 @@
   color: $base-color-dark;
   &__img {
     filter: drop-shadow(0px 0px 11px rgba(0, 0, 0, 0.2));
+    flex: 1 1 50%;
     & img {
-      max-height: 382px;
+      // max-height: 382px;
+      max-width: 100%;
     }
+  }
+  &__desk {
+    flex: 1 1 50%
   }
   &__title {
     font-family: $font-family-header;
-    font-size: 32px;
-    line-height: 38px;
+    @include adaptive_font(32, 22);
+    line-height: 1.2;
     letter-spacing: 0.32px;
     margin-bottom: 7px;
   }
   &__price {
     font-family: $font-family-base;
     color: $base-color-light;
-    font-size: 21px;
-    line-height: 33px;
+    @include adaptive_font(21, 18);
+    line-height: 1.6;
   }
   &__about {
     font-family: $font-family-base;
-    font-size: 19px;
-    line-height: 28px;
+    @include adaptive_font(19, 16);
+    line-height: 1.5;
     color: $font-color-grey;
     margin: 17px 0 7px;
   }
   &__label {
     font-family: $font-family-header;
-    font-size: 24px;
-    line-height: 29px;
+    @include adaptive_font(24, 19);
+    line-height: 1.2;
     position: relative;
     padding-left: 26px;
     margin-bottom: 27px;

@@ -1,32 +1,41 @@
 .wrapper {
   margin: 0 auto;
-  padding: 20px 0;
   max-width: 1300px;
+  @include xl {
+    padding: 0 20px;
+  }
 }
 
 .btn {
   font-family: $font-family-header;
   font-weight: 400;
-  font-size: 19px;
+  @include adaptive_font(19, 16);
   color: $base-color-dark;
-  padding: 18px 52px;
+  padding: 16px 50px;
   cursor: pointer;
+  transition: all .5s ease;
   &_light {
     background: $base-color-light;
     letter-spacing: 0.57px;
-    border: none;
+    border: 2px solid $base-color-light;
+    &:hover {
+      background: $font-color-light;
+    }
   }
   &_transparent {
     background: transparent;
     letter-spacing: 0.38px;
-    border: 2px solid #ffca42;
+    border: 2px solid $base-color-light;
+    &:hover {
+      background: $base-color-light;
+    }
   }
 }
 
 .title-2 {
   font-family: $font-family-header;
-  font-size: 42px;
-  line-height: 50px;
+  @include adaptive_font(42, 27);
+  line-height: 1.2;
   color: $base-color-dark;
   position: relative;
   &::after {

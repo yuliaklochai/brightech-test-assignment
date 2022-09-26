@@ -1,4 +1,9 @@
 .header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
   background: $base-color-dark;
   &__left,
   &__right {
@@ -6,14 +11,25 @@
     display: flex;
     align-items: center;
   }
+  &__left {
+    flex-wrap: wrap;
+  }
   &__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 20px 0;
+    @include xl {
+      padding: 20px;
+    }
   }
 }
 .logo {
+  padding: 20px;
   margin-right: 35px;
+  @include lg {
+    margin-right: 10px;
+  }
 }
 .social {
   display: flex;
@@ -22,6 +38,14 @@
     height: 45px;
     width: 45px;
     background: #fff;
+    transition: all .5s ease;
+    &:hover {
+      background: $base-color-light;
+    }
+    &_transparent {
+      background: transparent;
+      border: 1px solid $base-color-light;
+    }
   }
   &__link {
     width: 100%;
@@ -30,8 +54,11 @@
     justify-content: center;
     align-items: center;
   }
-  &__img {
+  &__img_dark {
     color: #141414;
+  }
+  &__img_light {
+    color: $font-color-light;
   }
 }
 .nav {
@@ -42,9 +69,10 @@
   }
   &__link {
     color: $font-color-nav;
-    font-size: $font-size-nav;
+    @include adaptive_font(17, 15);
     font-family: $font-family-base;
     letter-spacing: 0.17px;
+    transition: all .5s ease;
     &:hover {
       color: $base-color-light;
     }
@@ -58,6 +86,10 @@
     height: 17px;
     width: 17px;
     cursor: pointer;
+    transition: all .5s ease;
+    &:hover {
+      transform: scale(1.5);
+    }
   }
   &__img {
     width: 100%;

@@ -1,0 +1,51 @@
+.hamburger {
+  display: none;
+}
+.bar {
+  display: block;
+  width: 40px;
+  height: 4px;
+  margin: 8px auto;
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+}
+@include md {
+  .nav__list {
+    position: fixed;
+    right: -100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 50%;
+    height: 100%;
+    top: 0;
+    transition: 0.3s;
+    padding-top: 100px;
+    align-items: center;
+  }
+  .nav__list.active {
+    right: 0;
+    background: $base-color-dark;
+  }
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    margin-left: 15px;
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(16px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+@include sm {
+  .order__btn {
+    display: none;
+  }
+}

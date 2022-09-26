@@ -4,7 +4,8 @@
 @import 'core/reset';
 @import 'core/typography';
 
-@import 'components';
+@import 'components/components';
+@import 'components/burger';
 @import 'layout/header';
 @import 'layout/banner';
 @import 'layout/books';
@@ -12,3 +13,8 @@
 @import 'layout/partners';
 @import 'layout/order-today';
 @import 'layout/learn';
+@import 'layout/chapters';
+@import 'layout/reviews';
+@import 'layout/swiper';
+@import 'layout/subscribe';
+@import 'layout/footer';

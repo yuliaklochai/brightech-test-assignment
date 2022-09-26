@@ -1,0 +1,84 @@
+.footer {
+  background: $base-color-dark;
+  padding: 92px 0 25px;
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 85px;
+    flex-wrap: wrap;
+    @include md {
+      justify-content: space-evenly;
+    }
+    @include xs {
+      flex-direction: column;
+      margin-bottom: 20px;
+    }
+  }
+  &__logo {
+    margin-bottom: 20px;
+  }
+  &__title {
+    font-family: $font-family-header;
+    @include adaptive_font(24, 20);
+    line-height: 1.4;
+    margin-bottom: 24px;
+    letter-spacing: 0.384px;
+  }
+  &__item {
+    position: relative;
+    padding-left: 40px;
+    margin-bottom: 9px;
+    &::before {
+      content: "";
+      width: 5px;
+      height: 5px;
+      background: $base-color-light;
+      border-radius: 50%;
+      filter: drop-shadow(0.5em 0px 0px $base-color-light)
+        drop-shadow(-0.5em 0px 0px $base-color-light);
+      position: absolute;
+      left: 16px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+  &__link {
+    font-family: $font-family-base;
+    color: $font-color-footer;
+    @include adaptive_font(18, 15);
+    line-height: 1.6;
+    letter-spacing: 0.18px;
+    max-width: 250px;
+    transition: all 0.5s ease;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__contact {
+    display: flex;
+    margin-bottom: 28px;
+  }
+  &__label {
+    font-family: $font-family-header;
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: 0.36px;
+    letter-spacing: 0.36px;
+    width: 110px;
+  }
+}
+.copyright {
+  font-family: $font-family-base;
+  @include adaptive_font(17, 14);
+  line-height: 1.5;
+  text-align: center;
+  letter-spacing: 0.17px;
+  color: $font-color-footer;
+  &__link {
+    color: $font-color-light;
+    transition: all 0.5s ease;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

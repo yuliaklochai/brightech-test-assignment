@@ -5,7 +5,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 200px;
+    gap: 15%;
+    @include sm {
+      flex-direction: column;
+      gap: 30px;
+    }
+  }
+  &__content {
+    flex: 1 1 50%;
   }
   &__title {
     color: $font-color-light;
@@ -16,12 +23,18 @@
   }
   &__desc {
     font-family: $font-family-base;
-    font-size: 19px;
-    line-height: 28px;
+    @include adaptive_font(19, 16);
+    line-height: 1.5;
     color: $font-color-footer;
     margin-bottom: 27px;
   }
   &__btn {
     color: $font-color-light;
+  }
+  &__img {
+    flex: 1 1 50%;
+    img {
+      width: 100%;
+    }
   }
 }

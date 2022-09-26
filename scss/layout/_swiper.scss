@@ -1,0 +1,114 @@
+.articles {
+  background: #f4f8ff;
+  padding: 126px 0 150px;
+  &__wrapper {
+    @include xl {
+      padding: 0 50px;
+    }
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 96px;
+    &::after {
+      left: 50%;
+      bottom: -23px;
+      transform: translateX(-50%);
+    }
+  }
+  &__slider {
+    position: relative;
+  }
+}
+.slide {
+  background: $font-color-light;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  &__img {
+    width: 100%;
+    & img {
+      width: 100%;
+    }
+  }
+  &__content {
+    padding: 25px 30px 30px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  &__title {
+    font-family: $font-family-header;
+    @include adaptive_font(24, 21);
+    line-height: 1.4;
+    letter-spacing: 0.24px;
+    color: $base-color-dark;
+    margin-bottom: 19px;
+  }
+  &__text {
+    font-family: $font-family-base;
+    @include adaptive_font(19, 16);
+    line-height: 1.6;
+    color: $font-color-grey;
+    margin-bottom: 13px;
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__link {
+    font-family: $font-family-header;
+    @include adaptive_font(19, 16);
+    line-height: 1.2;
+    letter-spacing: 0.38px;
+    color: $base-color-dark;
+    padding-bottom: 4px;
+    border-bottom: 2px solid $base-color-dark;
+    transition: all .5s ease;
+    &:hover {
+      color: $base-color-light;
+      border-bottom: 1px solid $base-color-light;
+    }
+  }
+  &__date {
+    font-family: $font-family-base;
+    @include adaptive_font(16, 14);
+    line-height: 1.6;
+    color: $base-color-dark;
+  }
+}
+
+//Swiper
+.swiper-button-prev {
+  left: -25px;
+}
+.swiper-button-next {
+  right: -25px;
+}
+.swiper-button-prev,
+.swiper-button-next {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: $base-color-light;
+  transition: all .5s ease;
+  &::after {
+    content: "";
+    width: 25px;
+    height: 25px;
+    border-left: 3px solid $base-color-dark;
+    border-bottom: 3px solid $base-color-dark;
+    position: absolute;
+  }
+  &:hover {
+    background: transparent;
+  }
+}
+.swiper-button-prev::after {
+  transform: rotate(45deg);
+  right: 8px;
+}
+.swiper-button-next::after {
+  transform: rotate(-135deg);
+  left: 8px;
+}

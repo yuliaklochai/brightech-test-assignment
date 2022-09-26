@@ -1,0 +1,84 @@
+.chapters {
+  background: $background-color-light;
+  padding: 116px 0 130px;
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__title {
+    text-align: center;
+    margin-bottom: 96px;
+    &::after {
+      left: 50%;
+      bottom: -23px;
+      transform: translateX(-50%);
+    }
+  }
+  &__block {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+    @include sm {
+      grid-template-columns: 1fr;
+    }
+  }
+  &__btn {
+    padding: 24px 92px;
+    margin-bottom: 34px;
+  }
+  &__text {
+    font-family: $font-family-base;
+    color: $font-color-grey;
+    @include adaptive_font(18, 15);
+    line-height: 1.6;
+  }
+  &__link {
+    color: $base-color-dark;
+    letter-spacing: 0.19px;
+    transition: all .5s ease;
+    padding-bottom: 2px;
+    &:hover {
+      border-bottom: 1px solid $base-color-dark;
+    }
+  }
+}
+.chapter {
+  background: $font-color-light;
+  padding: 42px 62px 35px 40px;
+  &__stat {
+    @include md {
+      flex-direction: column;
+    }
+  }
+  &__title {
+    font-family: $font-family-header;
+    @include adaptive_font(24, 21);
+    line-height: 1.2;
+    color: $base-color-dark;
+    margin-bottom: 21px;
+  }
+  &__desc {
+    font-family: $font-family-base;
+    color: $font-color-grey;
+    @include adaptive_font(19, 16);
+    line-height: 1.7;
+    margin-bottom: 10px;
+  }
+}
+.stat {
+  &__text {
+    font-family: $font-family-header;
+    @include adaptive_font(22, 20);
+    line-height: 1.4;
+    color: $base-color-dark;
+  }
+  &__data {
+    font-family: $font-family-base;
+    @include adaptive_font(17, 15);
+    line-height: 1.6;
+    color: $font-color-grey;
+    margin-left: 10px;
+  }
+}

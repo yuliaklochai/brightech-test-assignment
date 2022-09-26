@@ -1,0 +1,50 @@
+@mixin flex-rule($justify-content, $flex-direction, $align-items, $flex-wrap) {
+    display: flex;
+    justify-content: $justify-content;
+    flex-direction: $flex-direction;
+    align-items: $align-items;
+    flex-wrap: $flex-wrap;
+}
+
+@mixin adaptive_font($maxSize, $minSize) {
+    $addSize: $maxSize - $minSize;
+    $addMobSize: $addSize + $addSize * 0.7;
+
+    @media (max-width: $lg) {
+        font-size: calc(#{$minSize + px} + #{$addMobSize} * ((100vw - 320px) / #{$xxl}));
+    }
+
+    @media (min-width: $lg) {
+        font-size: calc(#{$minSize + px} + #{$addSize} * (100vw / #{$xxl}));
+    }
+}
+
+@mixin xs {
+    @media (max-width: #{$sm - 1px}) {
+        @content;
+    }
+}
+
+@mixin sm {
+    @media (max-width: #{$md - 1px}) {
+        @content;
+    }
+}
+
+@mixin md {
+    @media (max-width: #{$lg - 1px}) {
+        @content;
+    }
+}
+
+@mixin lg {
+    @media (max-width: #{$xl - 1px}) {
+        @content;
+    }
+}
+
+@mixin xl {
+    @media (max-width: 1300px) {
+        @content;
+    }
+}
