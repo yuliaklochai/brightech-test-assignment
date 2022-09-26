@@ -27,3 +27,20 @@ function mobileMenu() {
     hamburger.classList.toggle("active");
     navMenu.classList.toggle("active");
 }
+
+//Slow scroll 
+
+let anchors = document.querySelectorAll('a[href*="#"]')
+
+anchors.forEach((anchor) => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    
+    let blockID = anchor.getAttribute('href').substring(1);
+    
+    document.getElementById(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    })
+  })
+});

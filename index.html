@@ -16,21 +16,23 @@
     <div class="wrapper header__wrapper">
       <div class="header__left">
         <div class="logo">
-          <img src="./img/logo.svg" alt="logo" class="logo__img">
+          <a href="#home">
+            <img src="./img/logo.svg" alt="logo" class="logo__img">
+          </a>
         </div>
-        <ul class="social">
+        <ul class="social header__social">
           <li class="social__item">
-            <a class="social__link" href="">
+            <a class="social__link" href="https://www.facebook.com/" target="_blank">
               <i class="fa fa-facebook social__img_dark"></i>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="">
+            <a class="social__link" href="https://twitter.com/" target="_blank">
               <i class="fa fa-twitter social__img_dark"></i>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="">
+            <a class="social__link" href="https://www.linkedin.com/" target="_blank">
               <i class="fa fa-linkedin social__img_dark"></i>
             </a>
           </li>
@@ -40,16 +42,16 @@
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#" class="nav__link">Home</a>
+              <a href="#home" class="nav__link">Home</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">About</a>
+              <a href="#about" class="nav__link">About</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Pages</a>
+              <a href="#pages" class="nav__link">Pages</a>
             </li>
             <li class="nav__item">
-              <a href="#" class="nav__link">Contact Us</a>
+              <a href="#contact-us" class="nav__link">Contact Us</a>
             </li>
           </ul>
         </nav>
@@ -70,7 +72,7 @@
     </div>
   </header>
   <main class="main">
-    <section class="banner">
+    <section class="banner" id="home">
       <div class="wrapper banner__wrapper">
         <div class="banner__content">
           <h3 class="banner__subtitle">Welcome to Pages!!!</h3>
@@ -78,7 +80,7 @@
           <p class="banner__text">We believe that reading books are essential to a healthy culture.</p>
           <p class="banner__text">They’re where authors can connect with readers.</p>
           <div class="banner__btns">
-            <button class="btn btn_light">Order Today</button>
+            <button class="btn btn_light banner__btn">Order Today</button>
             <a href="" class="banner__link">Read Free Demo</a>
           </div>
           <ul class="banner__stat stat">
@@ -132,7 +134,7 @@
         </div>
       </div>
     </section>
-    <section class="author">
+    <section class="author" id="about">
       <div class="wrapper author__wrapper">
         <div class="author__img">
           <img src="./img/author.jpg" alt="">
@@ -248,7 +250,7 @@
         </div>
       </div>
     </section>
-    <section class="chapters">
+    <section class="chapters" id="pages">
       <div class="wrapper chapters__wrapper">
         <h2 class="title-2 chapters__title">Enhance knowledge & Vision</h2>
         <div class="chapters__block">
@@ -487,7 +489,7 @@
       </div>
     </section>
   </main>
-  <footer class="footer">
+  <footer class="footer" id="contact-us">
     <div class="wrapper footer__wrapper">
       <div class="footer__content">
         <div class="footer__block">
@@ -496,22 +498,22 @@
           </div>
           <ul class="social">
             <li class="social__item social__item_transparent">
-              <a class="social__link" href="">
+              <a class="social__link" href="https://www.facebook.com/" target="_blank">
                 <i class="fa fa-facebook social__img_light"></i>
               </a>
             </li>
             <li class="social__item social__item_transparent">
-              <a class="social__link" href="">
+              <a class="social__link" href="https://twitter.com/home" target="_blank">
                 <i class="fa fa-twitter social__img_light"></i>
               </a>
             </li>
             <li class="social__item social__item_transparent">
-              <a class="social__link" href="">
+              <a class="social__link" href="https://www.linkedin.com/" target="_blank">
                 <i class="fa fa-linkedin social__img_light"></i>
               </a>
             </li>
             <li class="social__item social__item_transparent">
-              <a class="social__link" href="">
+              <a class="social__link" href="https://www.instagram.com/" target="_blank">
                 <i class="fa fa-instagram social__img_light"></i>
               </a>
             </li>
@@ -561,15 +563,16 @@
           <h3 class="footer__title">Keep in Touch</h3>
           <div class="footer__contact">
             <p class="footer__label">Address :</p>
-            <a href="" class="footer__link">24A Kingston St, Los Vegas NC 28202, USA.</a>
+            <a href="https://www.google.com/maps/place/Kingston+Cove+St,+Las+Vegas" target="_blank"
+              class="footer__link">24A Kingston St, Los Vegas NC 28202, USA.</a>
           </div>
           <div class="footer__contact">
             <p class="footer__label">Mail :</p>
-            <a href="" class="footer__link">support@pages.com</a>
+            <a href="mailto:support@pages.com" class="footer__link">support@pages.com</a>
           </div>
           <div class="footer__contact">
             <p class="footer__label">Phone :</p>
-            <a href="" class="footer__link">(+22) 123 - 4567 - 900</a>
+            <a href="tel:+221234567900" class="footer__link">(+22) 123 - 4567 - 900</a>
           </div>
         </div>
       </div>
