@@ -12,9 +12,7 @@
     align-items: center;
   }
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-rule(space-between, row, center);
     padding: 20px 0;
     @include xl {
       padding: 20px;
@@ -35,7 +33,7 @@
     height: 45px;
     width: 45px;
     background: #fff;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     &:hover {
       background: $base-color-light;
     }
@@ -47,9 +45,7 @@
   &__link {
     width: 100%;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-rule(center, row, center);
   }
   &__img_dark {
     color: #141414;
@@ -74,7 +70,7 @@
     @include adaptive_font(17, 15);
     font-family: $font-family-base;
     letter-spacing: 0.17px;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     &:hover {
       color: $base-color-light;
     }
@@ -88,7 +84,7 @@
     height: 17px;
     width: 17px;
     cursor: pointer;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     &:hover {
       transform: scale(1.5);
     }

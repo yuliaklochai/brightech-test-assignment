@@ -2,9 +2,7 @@
   background: $background-color-light;
   padding: 116px 0 130px;
   &__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex-rule(space-between, column, center);
   }
   &__title {
     text-align: center;
@@ -37,7 +35,7 @@
   &__link {
     color: $base-color-dark;
     letter-spacing: 0.19px;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     padding-bottom: 2px;
     &:hover {
       border-bottom: 1px solid $base-color-dark;

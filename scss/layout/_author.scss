@@ -2,9 +2,7 @@
   background: $background-color-light;
   padding: 140px 0;
   &__wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-rule(space-between, row, center);
     gap: 15%;
     @include md {
       flex-direction: column;

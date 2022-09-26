@@ -33,9 +33,7 @@
   &__content {
     padding: 25px 30px 30px;
     flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include flex-rule(space-between, column, stretch);
   }
   &__title {
     font-family: $font-family-header;
@@ -64,7 +62,7 @@
     color: $base-color-dark;
     padding-bottom: 4px;
     border-bottom: 2px solid $base-color-dark;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     &:hover {
       color: $base-color-light;
       border-bottom: 1px solid $base-color-light;
@@ -91,7 +89,7 @@
   height: 50px;
   border-radius: 50%;
   background: $base-color-light;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   &::after {
     content: "";
     width: 25px;

@@ -6,9 +6,7 @@
   &__wrapper {
     padding: 100px 21px 100px 23px;
     gap: 75px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-rule(space-between, row, center);
     @include sm {
       flex-direction: column;
     }
@@ -65,7 +63,7 @@
     letter-spacing: 0.38px;
     border-bottom: 1px solid #fff;
     margin-top: 20px;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     &:hover {
       color: $base-color-light;
       border-bottom: 1px solid $base-color-light;

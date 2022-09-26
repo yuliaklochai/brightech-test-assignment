@@ -40,7 +40,7 @@
     color: $base-color-dark;
     @include adaptive_font(18, 15);
     line-height: 1.6;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
     padding-bottom: 2px;
     &:hover {
       border-bottom: 1px solid $base-color-dark;

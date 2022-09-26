@@ -13,7 +13,7 @@
   color: $base-color-dark;
   padding: 16px 50px;
   cursor: pointer;
-  transition: all .5s ease;
+  transition: all 0.5s ease;
   &_light {
     background: $base-color-light;
     letter-spacing: 0.57px;
@@ -39,7 +39,7 @@
   color: $base-color-dark;
   position: relative;
   &::after {
-    content: '';
+    content: "";
     display: block;
     height: 3px;
     width: 50px;
